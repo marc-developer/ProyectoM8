@@ -1,0 +1,105 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/
+
+# Calculadora
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Questions Collection [/questions]
+
+### List All Questions [/GET]
+
++ Response 200 (application/json)
+
+        [
+        {
+
+            "nom": "suma",
+            "simbol": "+"
+
+        },
+        {
+
+            "nom": "resta",
+            "simbol": "-"
+        },
+        {
+        
+            "nom": "multiplicacio",
+            "simbol": "*"
+        },
+        {
+            "nom": "divisio",
+            "simbol": "/"
+        }
+
+## Division [/divisio]
+### Division [POST]
+
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /division/{p1}/{p2}
+
+    + Body
+
+            {
+                "operador": "/",
+                "resultat": 34
+            }
+
+## Suma [/suma]           
+### Suma [POST]
+
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /suma/{p1}/{p2}
+
+    + Body
+
+            {
+                "operador": "+",
+                "resultat": 34
+            }
+
+
+## Resta [/resta]                     
+### Resta [POST]
+
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /resta/{p1}/{p2}
+
+    + Body
+
+            {
+                "operador": "-",
+                "resultat": 34
+            }
+ 
+ 
+## Multiplicacion [/multiplicacion]                     
+### Multiplicacion [POST]
+
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /multiplicacion/{p1}/{p2}
+
+    + Body
+
+            {
+                "operador": "*",
+                "resultat": 34
+            }
+                                            
