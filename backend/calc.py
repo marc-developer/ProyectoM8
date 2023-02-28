@@ -2,6 +2,8 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+KEY = 1234
+
 @app.route('/')
 def hello_world():
     return jsonify({'name': 'Calculadora'})
